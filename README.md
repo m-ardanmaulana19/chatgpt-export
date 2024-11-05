@@ -1,4 +1,4 @@
-# Export OpenAI ChatGPT Conversations (chatgpt-export)
+# Export OpenAI ChatGPT Conversations (chatgpt-export) [TEMPORARY CHAT specifically]
 
 [![GitHub license](https://img.shields.io/github/license/ryanschiang/chatgpt-export)](
     ./LICENSE
@@ -17,7 +17,7 @@ You can export the active ChatGPT chat log directly from the browser console, en
 
 ## Usage
 
- 1. Navigate to [chat.openai.com/chat](https://chat.openai.com/chat).
+ 1. Navigate to [https://chatgpt.com/?model=gpt-4o&temporary-chat=true](https://chatgpt.com/?model=gpt-4o&temporary-chat=true).
  2. Open the chat thread you'd like to export.
  3. Open the browser console (how to open console: [Chrome](https://developer.chrome.com/docs/devtools/open), [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/), [Safari](https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/Web_Inspector_Tutorial/EnableWebInspector/EnableWebInspector.html))
  4. Follow the below steps depending on which output type you'd like.
@@ -68,38 +68,7 @@ You can export the active ChatGPT chat log directly from the browser console, en
 }
 ```
 
-### Markdown
 
-1. Copy contents of [`/dist/md.min.js`](./dist/md.min.js)
-2. Paste into browser console
-
-#### Example output (Markdown export)
-
-````markdown
-# Fetch API: Modern HTTP Requests
-`2024-03-20 09:12:00`
-
-_Prompt_: 
-How do I send a request with Javascript?
-
-_ChatGPT_:
-To send a request in JavaScript, you typically use either the XMLHttpRequest object or the more modern Fetch API. Given your expertise and the trend towards modern, more efficient, and promise-based solutions, I recommend using the Fetch API for most use cases. It's more powerful and flexible, aligning with contemporary JavaScript practices.
-
-### Using Fetch API
-
-The Fetch API provides an easy and logical way to fetch resources asynchronously across the network. It's built on Promises, making it a better choice for handling responses and streamlining error handling.
-````
-
-### Image (.PNG)
-
-1. Copy contents of [`/dist/image.min.js`](./dist/image.min.js)
-2. Paste into browser console
-
-> [!NOTE]  
-> Downloading as an image uses the `html2canvas` library to take a screenshot of the chat log. This may take a few seconds to process.
-
-#### Example output (Image export):
-![alt text](./public/chatgpt-export-example.png "chatgpt-export Example Output")
 
 ## Limitations
 
@@ -111,6 +80,7 @@ It currently supports:
 - Code blocks
 - Tables
 - Headings
+
 
 ## Acknowledgements
 
